@@ -1,0 +1,48 @@
+@import '../base/variables.scss';
+
+.nav{
+    margin: auto;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav--logo{
+    width: auto;
+    margin: 0px 16px;
+}
+
+.search{
+    height: 40px;
+    background: $white;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);;
+    max-width: 60%;
+    width: calc(100% - 350px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transition: all ease-in-out 0.2s;
+}
+
+.search--form{
+    display: flex;
+    width: 100%;
+}
+
+.search--input{
+    padding: 0 16px;
+    width: calc(100% - 74px);
+}
+
+.search--button{
+    width: 24px;
+    border: none;
+    background: transparent;
+    margin: 0 16px;
+    padding: 0;
+    position: relative;
+    transition: all ease-in-out 0.2s;
+}

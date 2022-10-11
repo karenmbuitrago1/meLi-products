@@ -1,0 +1,61 @@
+@import '../base/variables.scss';
+
+.products{
+    padding: 16px 323px 16px 347px;
+    background-color: $fourthColor;
+}
+
+.products--list{
+    padding: 0;
+    background-color: $white;
+}
+
+.product--element{
+    display: flex;
+    // flex-wrap: wrap;
+    border-bottom: 1px  solid $fourthColor;
+}
+
+.product--img{
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    margin: 16px;
+}
+
+.product--description{
+    color: $secondaryColor;
+    font-weight: 400;
+}
+
+
+.product--value{
+    margin: 0;
+    font-size: 24px;
+    color: $secondaryColor;
+    font-weight: 500;
+}
+
+.product--title{
+    margin: 32px 0 0;
+    font-size: 18px;
+}
+
+.product--state{
+    margin: 0;
+    font-size: 18px;
+}
+
+.product--location{
+    font-size: 12px;
+    margin: 16px 0;
+    padding: 16px 0;
+    color: $alternativeColor;
+    font-weight: 500;
+}
+
+.product--section{
+    margin: 16px 0;
+    padding: 16px 0;
+    width: 74%;
+}

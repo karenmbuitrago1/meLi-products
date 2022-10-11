@@ -1,0 +1,56 @@
+.product--detail{
+    margin: 0 200px;   
+}
+
+.detail--component{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.detail--img{
+    width: 680px;
+}
+
+.detail--text{
+    width: 100%;
+    margin: 32px;
+}
+.detail--location{
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+    font-weight: 500;
+}
+
+.detail--title{
+    margin: 16px 0 0 0;
+    font-size: 24px;
+}
+
+.detail--value{
+    margin: 32px 0;
+    font-size: 46px;
+}
+
+.detail--button{
+    background-color: dodgerblue;
+    border: none;
+    font-size: 16px;
+    padding: 16px;
+    width: 232px;
+    color: white;
+    border-radius: 4px;
+}
+
+.detail--description{
+    display: flex;
+    flex-direction: column;
+}
+
+.detail--descriptionProduct{
+    font-size: 28px;
+}
+
+.detail--description--detail{
+    font-size: 16px;
+}

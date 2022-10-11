@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Times New Roman', Times, serif;
+}
+
+header{
+  width: 100%;
+  background-color: $principalColor;
+}
+
+button{
+  cursor: pointer;
+}
+
+input{
+  font-size: 18px;   
+  border: none;
+  -webkit-appearance: none;
+  transition: all ease-in-out 0.2s; 
+}
+
+input::placeholder{
+  font-weight: 500;
+  color: $thirdColor;
+}
+
+
