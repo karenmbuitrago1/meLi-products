@@ -1,12 +1,10 @@
 
 
 // Import json with list of product - search resulto
-// const  GetsearchList  = require('../services/ProductListService')
 require('dotenv').config();
 const axios = require('axios');
 
 const API_URL = process.env.API_URL;
-// Create controller for GET request to '/items/id'
 exports.productGetAll = async (req, res) => {
   const id = req.params.id;
   const { data } =  await axios.get(

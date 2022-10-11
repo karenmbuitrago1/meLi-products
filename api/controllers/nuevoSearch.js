@@ -1,12 +1,10 @@
 
 
 // Import json with list of search
-// const  GetsearchList  = require('../services/ProductListService')
 require('dotenv').config();
 const axios = require('axios');
 
 const API_URL = process.env.API_URL;
-// Create controller for GET request to '/search/all'
 exports.searchGetAll = async (req, res) => {
   const searchList = req.query.q;
   const { data } =  await axios.get(

@@ -7,7 +7,6 @@ const searchController  = require('../controllers/nuevoSearch')
 // Create express router
 const router = express.Router()
 
-// Create route between homeControllers and '/' endpoint
 router.get('/', searchController.searchGetAll, function(){
 });
 
