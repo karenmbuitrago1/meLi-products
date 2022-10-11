@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react'
+import NavBarLogo from "../components/NavbarLogo";
+import SearchBox from "../components/SearchBox";
 // import { Helmet } from 'react-helmet-async';
 // 
 function ProductPage() {
@@ -18,6 +20,10 @@ function ProductPage() {
 
   return (
     <>
+      <header className='Header'>
+        <NavBarLogo />
+        <SearchBox setData={null} />
+      </header>
       <section className='detail'>
         {/* <Helmet>
           <title>{product.title} | Mercado Libre</title>
@@ -28,14 +34,14 @@ function ProductPage() {
             alt='Imagen del producto'
             width='680px' />
           <div className='detail__text'>
-            <p className='detail__location'>{product.condition} | {product.sold} vendidos </p>
+            <p className='detail__location'>{product.condition} | {product.sold_quantity} vendidos </p>
             <p className='detail__title'>{product.title}</p>
             <p className='detail__value'>${product.price}</p>
             <button className='detail__button'
-                    type="button" 
-                    name="Comprar" 
-                    title="Comprar producto">
-                      Comprar
+              type="button"
+              name="Comprar"
+              title="Comprar producto">
+              Comprar
             </button>
           </div>
         </div>

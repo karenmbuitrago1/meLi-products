@@ -1,11 +1,14 @@
-// import { Link } from 'react-router-dom';
-// import logo from '../assets/logo.png';
-import SearchNuevo from './searchList';
+import NavBarLogo from '../components/NavbarLogo';
+import SearchBox from '../components/SearchBox';
 
 function Home() {
+
   return (
     <>
-      <SearchNuevo />
+      <header className='Home'>
+        <NavBarLogo />
+        <SearchBox />
+      </header>
     </>
   );
 }
