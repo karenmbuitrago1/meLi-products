@@ -6,15 +6,11 @@ function ProductPage() {
   const params = useParams();
   const { id } = params;
   const [product, setProduct] = useState('');
-  // const queryParams = queryString.parse(window.location.search);
 
-  // Create async function for fetching product list
   useEffect(() => {
     const fetchSearch = async () => {
-      // console.log(id, "este es mi id")
       const dataRes = await fetch(`/api/items/${id}`)
-        .then(res => res.json()) // Process the incoming data
-      // Update productDetail state
+        .then(res => res.json());
       setProduct(dataRes);
     }
     fetchSearch();
@@ -22,27 +18,32 @@ function ProductPage() {
 
   return (
     <>
-      <div className='product--detail'>
-        {/* <Helmet> */}
-          {/* <title>{product.title} | Mercado Libre</title> */}
-        {/* </Helmet> */}
-        <div className='detail--component'>
-          <img src={product.imagen}
-            className='detail--img'
-            alt='Imagen de '
-          />
-          <div className='detail--text'>
-            <p className='detail--location'>{product.location}</p>
-            <p className='detail--title'>{product.title}</p>
-            <p className='detail--value'>{product.value}</p>
-            <button className='detail--button'>Comprar</button>
+      <section className='detail'>
+        {/* <Helmet>
+          <title>{product.title} | Mercado Libre</title>
+        </Helmet> */}
+        <div className='detail__component'>
+          <img src={product.picture}
+            className='detail__img'
+            alt='Imagen del producto'
+            width='680px' />
+          <div className='detail__text'>
+            <p className='detail__location'>{product.condition} | {product.sold} vendidos </p>
+            <p className='detail__title'>{product.title}</p>
+            <p className='detail__value'>${product.price}</p>
+            <button className='detail__button'
+                    type="button" 
+                    name="Comprar" 
+                    title="Comprar producto">
+                      Comprar
+            </button>
           </div>
         </div>
-        <div className='detail--description'>
-          <div className='detail--descriptionProduct'>Descripción del producto</div>
-          <p className='detail--description--detail'>{product.description}</p>
+        <div className='detail__description'>
+          <div className='detail__descriptionProduct'>Descripción del producto</div>
+          <p className='detail__description__detail'>{product.description}</p>
         </div>
-      </div>
+      </section>
     </>
   )
 }

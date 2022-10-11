@@ -5,48 +5,74 @@
     background-color: $fourthColor;
 }
 
-.products--list{
+.product__list{
     padding: 0;
     background-color: $white;
 }
 
-.product--element{
+.product__element{
     display: flex;
     // flex-wrap: wrap;
     border-bottom: 1px  solid $fourthColor;
 }
 
-.product--img{
+.product__img{
     width: 180px;
     height: 180px;
     border-radius: 4px;
     margin: 16px;
 }
 
-.product--description{
+.product__description{
     color: $secondaryColor;
     font-weight: 400;
 }
 
+.product__link{
+    text-decoration: none;
+    color: $secondaryColor;;
+}
 
-.product--value{
+
+.product__props{
+    display: flex;
+    align-items: flex-end;
+}
+
+.product__value{
     margin: 0;
     font-size: 24px;
     color: $secondaryColor;
     font-weight: 500;
 }
 
-.product--title{
+.product__shipping{
+    margin: 0 8px;
+    &.--false{
+        display: none;
+    }
+}
+
+
+
+.product__shipping--img{
+    border-radius: 100%;
+    background-color: $shippingColor;
+    padding: 4px;
+}
+
+.product__title{
     margin: 32px 0 0;
     font-size: 18px;
 }
 
-.product--state{
+.product__state{
     margin: 0;
     font-size: 18px;
+    text-transform: capitalize;
 }
 
-.product--location{
+.product__location{
     font-size: 12px;
     margin: 16px 0;
     padding: 16px 0;
@@ -54,8 +80,33 @@
     font-weight: 500;
 }
 
-.product--section{
+.product__section{
     margin: 16px 0;
     padding: 16px 0;
-    width: 74%;
+    width: 60%;
 }
+
+
+@media screen and (max-width:$sizeTabletLandScape) {
+    .products{
+        width: auto;
+        padding: 0;
+    }
+    .product__link{
+        margin: 8px;
+    }
+    .product__title{
+        margin: 20px 0 0;
+        font-size: 15px;
+    }
+    .product__img {
+        margin: 8px;
+    }
+    .product__section{
+        width: 30%;
+    }
+    .product__state {
+        font-size: 15px;
+    }
+}
+

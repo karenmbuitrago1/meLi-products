@@ -1,28 +1,45 @@
 import { Link } from 'react-router-dom';
+import shippingImg from '../assets/car.png';
 import '../styles/components/ListProducts.scss';
 
 function ListProducts({ item }) {
+
+  const shippingActive = item.shipping ? 'product__shipping --active' : 'product__shipping --false';
+
   return (
-    <li className='product--element'>
-      <Link to={`/items/${item.id}`}>
-        <img src={item.imagen}
-          className='product--img'
-          alt='Imagen de '
-        />
-      </Link>
-      <div className='product--section'>
-        <p className='product--value'>${item.value}</p>
-        <div className='product--description'>
+    // <section className='products'>
+      <ul className='product__list'>
+        <li key={item.id} className='product__element'>
           <Link to={`/items/${item.id}`}>
-            <p className='product--title'>{item.title}</p>
+            <img src={item.images}
+              className='product__img'
+              alt='Imagen de '
+            />
           </Link>
-          <p className='product--state'>{item.state}</p>
-        </div>
-      </div>
-      <div className='product--location'>
-        <p className='product--city'>{item.location}</p>
-      </div>
-    </li>
+          <div className='product__section'>
+            <div className='product__props'>
+              <p className='product__value'>${item.price.toLocaleString('de-DE')}</p>
+              <div className={shippingActive}>
+                <img src={shippingImg}
+                  className='product__shipping--img'
+                  alt='Imagen de carro'
+                  width='16px'
+                />
+              </div>
+            </div>
+            <div className='product__description'>
+              <Link to={`/items/${item.id}`} className='product__link'>
+                <p className='product__title'>{item.title}</p>
+              </Link>
+              <p className='product__state'>{item.condition}!</p>
+            </div>
+          </div>
+          <div className='product__location'>
+            <p className='product__city'>{item.address}</p>
+          </div>
+        </li>
+      </ul>
+    // </section>
   )
 };
 

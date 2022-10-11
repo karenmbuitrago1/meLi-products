@@ -1,56 +1,81 @@
-.product--detail{
-    margin: 0 200px;   
+.detail{
+    padding: 16px 323px 16px 347px;
+    background-color: $fourthColor;
 }
 
-.detail--component{
+.detail__component{
     display: flex;
     justify-content: space-evenly;
+    background-color: $white;
 }
 
-.detail--img{
+.detail__img{
     width: 680px;
+    height: auto;
 }
 
-.detail--text{
-    width: 100%;
+.detail__text{
     margin: 32px;
 }
-.detail--location{
+.detail__location{
     margin: 0;
     font-size: 14px;
-    color: gray;
+    color: $thirdColor;
     font-weight: 500;
+    text-transform: capitalize;
 }
 
-.detail--title{
+.detail__title{
+    width: 70%;
     margin: 16px 0 0 0;
     font-size: 24px;
 }
 
-.detail--value{
+.detail__value{
     margin: 32px 0;
     font-size: 46px;
 }
 
-.detail--button{
-    background-color: dodgerblue;
+.detail__button{
+    background-color: $buttonColor;
     border: none;
     font-size: 16px;
     padding: 16px;
-    width: 232px;
+    width: 70%;
     color: white;
     border-radius: 4px;
+    &:hover{
+        background-color: $buttonColorHover;
+    }
 }
 
-.detail--description{
+.detail__description{
     display: flex;
     flex-direction: column;
 }
 
-.detail--descriptionProduct{
+.detail__descriptionProduct{
     font-size: 28px;
 }
 
-.detail--description--detail{
+.detail__description__detail{
     font-size: 16px;
+}
+
+@media screen and (max-width:$sizeTabletLandScape) {
+    .detail {
+        margin: 8px;
+        padding: 0;
+    }
+    .detail__component{
+        flex-direction: column;
+    }
+
+    .detail__img{
+        width: 100%;
+    }
+    .detail__descriptionProduct{
+        margin: 8px;
+        font-size: 24px;
+    }
 }
