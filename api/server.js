@@ -28,8 +28,8 @@ app.use(cookieParser())
 app.use(bodyParser.json())
 
 // Implementa route para '/items' endpoints
-app.use('/api/items/', searchRouter)
-app.use('/api/items/:id', productRouter)
+app.use('/api/search/', searchRouter)
+app.use('/api/items/', productRouter)
 app.use('/', homeRouter)
 
 // Implementa route para errores

@@ -9,7 +9,6 @@ const API_URL = process.env.API_URL;
 // Create controller for GET request to '/search/all'
 exports.searchGetAll = async (req, res) => {
   const searchList = req.query.q;
-  const api = API_URL + `/sites/MLA/search?q=${searchList}`;
   const { data } =  await axios.get(
     API_URL + `/sites/MLA/search?q=${searchList}`
   );
@@ -22,8 +21,8 @@ exports.searchGetAll = async (req, res) => {
       condition: item.condition,
       address: item.address.state_name,
       images: item.thumbnail,
+      shipping: item.shipping.free_shipping
     }
   });
-  console.log(api, "api")
   res.json(searchItem)
 }

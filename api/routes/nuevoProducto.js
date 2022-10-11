@@ -8,7 +8,7 @@ const productController  = require('../controllers/nuevoProductList')
 const router = express.Router()
 
 // Create route between homeControllers and '/' endpoint
-router.get('/', productController.productGetAll);
+router.get('/:id', productController.productGetAll);
 
 // Export router
 module.exports = router

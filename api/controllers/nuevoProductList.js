@@ -8,23 +8,19 @@ const axios = require('axios');
 const API_URL = process.env.API_URL;
 // Create controller for GET request to '/items/id'
 exports.productGetAll = async (req, res) => {
-  // const id = req.params.id;
-  console.log(req, "console req")
-  const id = "MLA930020776";
-  const api = API_URL + `/items/${id}`;
+  const id = req.params.id;
   const { data } =  await axios.get(
     API_URL + `/items/${id}`
   );
-
-
+  
   const productItem = { 
     id: data.id, 
     title: data.title,
     location: data.seller_address.country.name,
     price: data.price,
-    picture: data.pictures,
+    picture: data.pictures[0].url,
     condition: data.condition,
-    free_shipping: data.free_shipping,
+    free_shipping: data.shipping.free_shipping,
     sold_quantity: data.sold_quantity,
     description: data.description,
   }
