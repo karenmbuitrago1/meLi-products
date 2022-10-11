@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Times New Roman', Times, serif;
+}
+
+.App{
+  display: block;
+  background-color: $fourthColor;
+}
+
+header{
+  width: 100%;
+  background-color: $principalColor;
+  display: flex;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+section{
+  grid-column: span 10;
+}
+
+button{
+  cursor: pointer;
+}
+
+input{
+  font-size: 18px;   
+  border: none;
+  -webkit-appearance: none;
+  transition: all ease-in-out 0.2s; 
+}
+
+input::placeholder{
+  font-weight: 500;
+  color: $thirdColor;
+}
+
+
